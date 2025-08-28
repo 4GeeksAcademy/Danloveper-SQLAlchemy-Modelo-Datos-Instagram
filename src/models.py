@@ -23,4 +23,4 @@ class Post(db.Model):
     Description : Mapped[str] = mapped_column(String)
 
     user_id: Mapped[int] = mapped_column(ForeignKey("user.id"))
-    user: Mapped['User'] = relationship(back_populates="autor")
+    user: Mapped['User'] = relationship(back_populates="posts")
